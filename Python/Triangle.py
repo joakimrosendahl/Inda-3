@@ -7,9 +7,21 @@ class Triangle:
 
     def validTriangle(self):
         if self._a < self._b + self._c and self._b < self._a + self._c and self._c < self._a + self._b:
-            print("Good triangle")
+            return True
         else:
             raise Exception("This is not a valid triangle!")
+            
+
+
+    def getTriangleType(self):
+        if self._a == self._b == self._c:
+            return "Equilateral Triangle"
+        elif self.validTriangle() and (self._a == self._b or self._a == self._c or self._b == self._c):
+            return "Isosceles Triangle"
+        elif self.validTriangle():
+            return "Scalene Triangle"
+        else:
+            return self.validTriangle()
 
 
     
