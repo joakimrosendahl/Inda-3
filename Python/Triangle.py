@@ -1,3 +1,5 @@
+import math
+
 class Triangle: 
     def __init__(self, a, b, c):
         self._a = a
@@ -22,6 +24,16 @@ class Triangle:
             return "Scalene Triangle"
         else:
             return self.validTriangle()
+        
+
+    def getPeremiter(self):
+        peremiter = (self._a + self._b + self._c)/2
+        return peremiter
+
+    def getArea(self):
+        area = math.sqrt((self.getPeremiter() * (self.getPeremiter() - self._a) * (self.getPeremiter() - self._b)
+        * (self.getPeremiter() - self._c)))
+        return area
 
 
     
