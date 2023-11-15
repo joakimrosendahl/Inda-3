@@ -26,13 +26,13 @@ class Triangle:
             return self.validTriangle()
         
 
-    def getPeremiter(self):
-        peremiter = (self._a + self._b + self._c)/2
-        return peremiter
+    def getPerimeter(self):
+        perimeter = (self._a + self._b + self._c)/2
+        return perimeter
 
     def getArea(self):
-        area = math.sqrt((self.getPeremiter() * (self.getPeremiter() - self._a) * (self.getPeremiter() - self._b)
-        * (self.getPeremiter() - self._c)))
+        area = math.sqrt((self.getPerimeter() * (self.getPerimeter() - self._a) * (self.getPerimeter() - self._b)
+        * (self.getPerimeter() - self._c)))
         return area
 
 
